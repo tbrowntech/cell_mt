@@ -1,9 +1,9 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav>    
+    <button @click="$router.push('/')">Home</button>
+    <router-view />
   </nav>
-  <router-view />
+  
 </template>
 
 <style>
