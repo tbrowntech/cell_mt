@@ -1,20 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/CSILogo.png" />
-    <br>
-    <button @click="$router.replace('questionOne')">Start</button>
-    <!--<HelloWorld msg="Welcome to Your Vue.js App" />-->
+    <img alt="CSI logo" src="../assets/CSILogo.png" />
+    <br />
+    <button @click="$router.push('questionOne')">Start</button>
+    <FootNav msg="Welcome to the cell modem troubleshooting wizard" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-/*import HelloWorld from "@/components/HelloWorld.vue";
+import FootNav from "@/components/FootNav.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    FootNav,
   },
-};*/
+};
 </script>

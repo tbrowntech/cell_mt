@@ -1,17 +1,54 @@
 <template>
-    <section id="main">
-        <!--question 8 div-->
-        <div id="questionEighta">
-            <p>Does your modem already have cellular service?</p>
-            <button id="q8ayes">Yes</button>
-            <button id="q8ano">No</button>
-            <div id="questionEightb" style="display: none;">
-                <p>Did you get your service through AT&T, Verizon, Campbell Scientific, or another carrier?</p>
-                <button id="att">AT&T</button>
-                <button id="verizon">Verizon</button>
-                <button id="csi">CampbellSci</button>
-                <button id="otherCarrier">Other</button>
-            </div>
-        </div>        
-    </section>
+  <section id="main">
+    <div id="questionEightb">
+      <p>
+        Did you get your service through AT&T, Verizon, Campbell Scientific, or
+        another carrier?
+      </p>
+      <div>
+        <button
+          id="att"
+          @click="$router.push('questionNine'), answer('8B: AT&T')"
+        >
+          AT&T
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="verizon"
+          @click="$router.push('questionNine'), answer('8B: Verizon')"
+        >
+          Verizon
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="csi"
+          @click="$router.push('questionNine'), answer('8B: CSI')"
+        >
+          CampbellSci
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="otherCarrier"
+          @click="$router.push('questionNine'), answer('8B: Other Carrier')"
+        >
+          Other
+        </button>
+      </div>
+    </div>
+  </section>
 </template>
+<script>
+export default {
+  methods: {
+    answer(record) {
+      console.log(record);
+    },
+  },
+};
+</script>

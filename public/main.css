@@ -1,0 +1,38 @@
+#home {
+  margin-right: 10px;
+}
+
+#back {
+  margin-left: 10px;
+}
+
+#app {
+  text-align: center;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+button {
+  background-color: rgba(3, 84, 151, 0.801);
+  color: white;
+  border-radius: 0%;
+  border-color: rgba(3, 84, 151, 0.801);
+}

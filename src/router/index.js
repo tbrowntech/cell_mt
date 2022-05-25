@@ -1,18 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import GoBack from "../components/GoBack.vue"
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
-  },  
+    component: () => import("../views/HomeView.vue"),
+  },
   {
     path: "/questionOne",
     name: "questionOne",
-    component: () =>
-      import("../components/QuestionOne.vue"),
+    component: () => import("../components/QuestionOne.vue"),
   },
   {
     path: "/questionTwo",
@@ -25,9 +22,54 @@ const routes = [
     component: () => import("../components/QuestionThree.vue"),
   },
   {
+    path: "/questionFour",
+    name: "questionFour",
+    component: () => import("../components/QuestionFour.vue"),
+  },
+  {
+    path: "/questionFive",
+    name: "questionFive",
+    component: () => import("../components/QuestionFive.vue"),
+  },
+  {
+    path: "/questionSix",
+    name: "questionSix",
+    component: () => import("../components/QuestionSix.vue"),
+  },
+  {
+    path: "/questionSevenA",
+    name: "questionSevenA",
+    component: () => import("../components/QuestionSevenA.vue"),
+  },
+  {
+    path: "/questionSevenB",
+    name: "questionSevenB",
+    component: () => import("../components/QuestionSevenB.vue"),
+  },
+  {
+    path: "/questionEightA",
+    name: "questionEightA",
+    component: () => import("../components/QuestionEightA.vue"),
+  },
+  {
+    path: "/questionEightB",
+    name: "questionEightB",
+    component: () => import("../components/QuestionEightB.vue"),
+  },
+  {
+    path: "/questionNine",
+    name: "questionNine",
+    component: () => import("../components/QuestionNine.vue"),
+  },
+  {
+    path: "/end",
+    name: "end",
+    component: () => import("../components/EndPage.vue"),
+  },
+  {
     path: "/GoBack",
     name: "GoBack",
-    component: GoBack,
+    component: () => import("../components/GoBack.vue"),
   },
 ];
 

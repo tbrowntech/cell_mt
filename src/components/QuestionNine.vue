@@ -1,12 +1,50 @@
 <template>
-    <section id="main">
-        <!--question 9 div-->
-        <div id="questionNine">
-            <p>Does your cellular account come with a public static IP address, or a private dynamic IP address?</p>
-            <button id="publicIP">Public Static</button>
-            <button id="privateIP">Private Dynamic</button>
-            <button id="unsure">Unsure</button>
-            <!--alert if they don't know -->
-        </div>        
-    </section>
+  <section id="main">
+    <div id="questionNine">
+      <p>
+        Does your cellular account come with a public static IP address, or a
+        private dynamic IP address?
+      </p>
+      <div>
+        <button
+          id="publicIP"
+          @click="$router.push('end'), answer('9: Public Static')"
+        >
+          Public Static
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="privateIP"
+          @click="$router.push('end'), answer('9: Private Dynamic')"
+        >
+          Private Dynamic
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="unsure"
+          @click="$router.push('end'), change(), answer('9: Unsure')"
+        >
+          Unsure
+        </button>
+      </div>
+    </div>
+  </section>
 </template>
+<script>
+export default {
+  methods: {
+    change() {
+      alert(
+        "Contact the person in your office who handles your cellular service"
+      );
+    },
+    answer(record) {
+      console.log(record);
+    },
+  },
+};
+</script>
