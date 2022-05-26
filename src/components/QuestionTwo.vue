@@ -2,7 +2,11 @@
   <section id="main">
     <div id="questionTwo">
       <p>Are you replacing an older LS300 or Raven XT cellular modem?</p>
+      <img alt="RavenXT" src="../assets/RavenXT.png" />
+      <br />
+      <img alt="LS300" src="../assets/LS300.png" />
       <div>
+        <br />
         <button
           id="q2yes"
           @click="

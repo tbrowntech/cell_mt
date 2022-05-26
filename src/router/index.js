@@ -66,11 +66,6 @@ const routes = [
     name: "end",
     component: () => import("../components/EndPage.vue"),
   },
-  {
-    path: "/GoBack",
-    name: "GoBack",
-    component: () => import("../components/GoBack.vue"),
-  },
 ];
 
 const router = createRouter({
