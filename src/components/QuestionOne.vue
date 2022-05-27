@@ -29,4 +29,5 @@ export default {
     },
   },
 };
+//document.getElementById().value <--use this possibly to record the button somewhere instead of just the console.
 </script>
