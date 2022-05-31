@@ -1,34 +1,22 @@
 <template>
   <section id="main">
     <div id="questionNine">
-      <p>
-        Does your cellular account come with a public static IP address, or a
-        private dynamic IP address?
-      </p>
+      <p>Does your modem already have cellular service?</p>
       <div>
         <button
-          id="publicIP"
-          @click="$router.push('end'), answer('9: Public Static')"
+          id="q8ayes"
+          @click="$router.push('questionTen'), answer('9: Yes')"
         >
-          Public Static
+          Yes
         </button>
       </div>
       <br />
       <div>
         <button
-          id="privateIP"
-          @click="$router.push('end'), answer('9: Private Dynamic')"
+          id="q8ano"
+          @click="$router.push('questionTen'), change(), answer('9: No')"
         >
-          Private Dynamic
-        </button>
-      </div>
-      <br />
-      <div>
-        <button
-          id="unsure"
-          @click="$router.push('end'), change(), answer('9: Unsure')"
-        >
-          Unsure
+          No
         </button>
       </div>
     </div>
@@ -38,9 +26,7 @@
 export default {
   methods: {
     change() {
-      alert(
-        "Contact the person in your office who handles your cellular service"
-      );
+      alert("This could be the connection issue");
     },
     answer(record) {
       console.log(record);

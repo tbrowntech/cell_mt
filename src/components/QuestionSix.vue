@@ -1,11 +1,11 @@
 <template>
   <section id="main">
     <div id="questionSix">
-      <p>How is your datalogger connected to power?</p>
+      <p>How is your modem connected to power?</p>
       <div>
         <button
           id="CSIOpower"
-          @click="$router.push('questionSevenA'), answer('6: CS I/O Power')"
+          @click="$router.push('questionSeven'), answer('6: CS I/O Power')"
         >
           CS I/O
         </button>
@@ -14,7 +14,7 @@
       <div>
         <button
           id="12V"
-          @click="$router.push('questionSevenA'), answer('6: 12V')"
+          @click="$router.push('questionSeven'), answer('6: 12V')"
         >
           12V Port/Power Cable
         </button>
@@ -23,7 +23,7 @@
       <div>
         <button
           id="sw12"
-          @click="$router.push('questionSevenA'), answer('6: sw12')"
+          @click="$router.push('questionSeven'), answer('6: sw12')"
         >
           SW12 Port
         </button>
@@ -32,7 +32,7 @@
       <div>
         <button
           id="batt"
-          @click="$router.push('questionSevenA'), answer('6: battery')"
+          @click="$router.push('questionSeven'), answer('6: battery')"
         >
           Direct to Battery
         </button>
@@ -41,7 +41,7 @@
       <div>
         <button
           id="a12Vother"
-          @click="$router.push('questionSevenA'), answer('6: 12V Other')"
+          @click="$router.push('questionSeven'), answer('6: 12V Other')"
         >
           Other 12V Source
         </button>
@@ -50,7 +50,7 @@
       <div>
         <button
           id="usb"
-          @click="$router.push('questionSevenA'), change(), answer('6: USB')"
+          @click="$router.push('questionSeven'), change(), answer('6: USB')"
         >
           USB only
         </button>

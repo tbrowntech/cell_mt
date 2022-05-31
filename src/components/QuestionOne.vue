@@ -6,7 +6,7 @@
         Or is it a new setup?
       </p>
       <div>
-        <button @click="$router.push('questionTwo'), answer('1: Stopped')">
+        <button @click="$router.push('questionThree'), answer('1: Stopped')">
           Stopped
         </button>
       </div>

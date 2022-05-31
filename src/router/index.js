@@ -37,29 +37,39 @@ const routes = [
     component: () => import("../components/QuestionSix.vue"),
   },
   {
-    path: "/questionSevenA",
-    name: "questionSevenA",
-    component: () => import("../components/QuestionSevenA.vue"),
+    path: "/questionSeven",
+    name: "questionSeven",
+    component: () => import("../components/QuestionSeven.vue"),
   },
   {
-    path: "/questionSevenB",
-    name: "questionSevenB",
-    component: () => import("../components/QuestionSevenB.vue"),
-  },
-  {
-    path: "/questionEightA",
-    name: "questionEightA",
-    component: () => import("../components/QuestionEightA.vue"),
-  },
-  {
-    path: "/questionEightB",
-    name: "questionEightB",
-    component: () => import("../components/QuestionEightB.vue"),
+    path: "/questionEight",
+    name: "questionEight",
+    component: () => import("../components/QuestionEight.vue"),
   },
   {
     path: "/questionNine",
     name: "questionNine",
     component: () => import("../components/QuestionNine.vue"),
+  },
+  {
+    path: "/questionTen",
+    name: "questionTen",
+    component: () => import("../components/QuestionTen.vue"),
+  },
+  {
+    path: "/questionEleven",
+    name: "questionEleven",
+    component: () => import("../components/QuestionEleven.vue"),
+  },
+  {
+    path: "/questionLocation",
+    name: "questionLocation",
+    component: () => import("../components/QuestionLocation.vue"),
+  },
+  {
+    path: "/questionSymptoms",
+    name: "questionSymptoms",
+    component: () => import("../components/QuestionSymptoms.vue"),
   },
   {
     path: "/end",

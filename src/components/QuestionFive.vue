@@ -2,8 +2,8 @@
   <section id="main">
     <div id="questionFive">
       <p>
-        Have you connected your datalogger and modem with an RS232 cable, CS I/O
-        cable, or Ethernet cable?
+        Have you connected your datalogger and modem with an RS232 cable (null
+        modem), CS I/O cable, or Ethernet cable?
       </p>
       <div>
         <button

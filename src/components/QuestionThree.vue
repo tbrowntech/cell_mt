@@ -23,7 +23,7 @@
       <div>
         <button
           id="integrated"
-          @click="$router.push('questionFour'), answer('3: Integrated')"
+          @click="$router.push('questionNine'), answer('3: Integrated')"
         >
           CR300-CELL2XX
         </button>
