@@ -26,7 +26,7 @@
 export default {
   methods: {
     change() {
-      alert("This could be the connection issue");
+      alert("Please make sure the modem has service with a cellular provider");
     },
     answer(record) {
       console.log(record);

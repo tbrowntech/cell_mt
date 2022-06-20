@@ -23,7 +23,7 @@
       <div>
         <button
           id="sw12"
-          @click="$router.push('questionSeven'), answer('6: sw12')"
+          @click="$router.push('questionSeven'), sw12(), answer('6: sw12')"
         >
           SW12 Port
         </button>
@@ -63,6 +63,11 @@ export default {
   methods: {
     change() {
       alert("Connect your modem to a 12V power source");
+    },
+    sw12() {
+      alert(
+        "Make sure your SW12 port is turned/turning on through your datalogger program"
+      );
     },
     answer(record) {
       console.log(record);
