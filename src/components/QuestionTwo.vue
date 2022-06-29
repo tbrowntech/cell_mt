@@ -1,28 +1,19 @@
 <template>
   <section id="main">
-    <div id="questionTwo">
-      <p>Are you replacing an older LS300 or Raven XT cellular modem?</p>
-      <img alt="RavenXT" src="../assets/RavenXT.png" />
-      <br />
-      <img alt="LS300" src="../assets/LS300.png" />
+    <div id="one">
+      <p>
+        Is your modem setup on a station that was working and then it stopped?
+        Or is it a new setup?
+      </p>
       <div>
-        <br />
-        <button
-          id="q2yes"
-          @click="
-            message, $router.push('questionThree'), change(), answer('2: Yes')
-          "
-        >
-          Yes
+        <button @click="$router.push('questionFour'), answer('1: Stopped')">
+          Stopped
         </button>
       </div>
       <br />
       <div>
-        <button
-          id="q2no"
-          @click="$router.push('questionThree'), answer('2: No')"
-        >
-          No
+        <button @click="$router.push('questionThree'), answer('1: New Setup')">
+          New Setup
         </button>
       </div>
     </div>
@@ -31,15 +22,12 @@
 
 <script>
 export default {
+  name: "QuestionOne",
   methods: {
-    change() {
-      alert(
-        "Before continuing, verify that you do not have any SerialOpen instructions in your datalogger program that use the exact same port that your new modem will use. It will break the connection with your new modem."
-      );
-    },
     answer(record) {
       console.log(record);
     },
   },
 };
+//document.getElementById().value <--use this possibly to record the button somewhere instead of just the console.
 </script>

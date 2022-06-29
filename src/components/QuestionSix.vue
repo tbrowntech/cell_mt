@@ -1,11 +1,23 @@
 <template>
   <section id="main">
-    <div id="questionSix">
-      <p>How is your modem connected to power?</p>
+    <div id="questionFive">
+      <p>
+        Have you connected your datalogger and modem with an RS232 cable (null
+        modem), CS I/O cable, Ethernet cable, or COM port?
+      </p>
       <div>
         <button
-          id="CSIOpower"
-          @click="$router.push('questionSeven'), answer('6: CS I/O Power')"
+          id="RS232"
+          @click="$router.push('questionSeven'), change(), answer('5: RS232')"
+        >
+          RS232
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="CSInput"
+          @click="$router.push('questionSeven'), change(), answer('5: CS I/O')"
         >
           CS I/O
         </button>
@@ -13,46 +25,23 @@
       <br />
       <div>
         <button
-          id="12V"
-          @click="$router.push('questionSeven'), answer('6: 12V')"
+          id="ethernet"
+          @click="
+            $router.push('questionSeven'), change(), answer('5: Ethernet')
+          "
         >
-          12V Port/Power Cable
+          Ethernet
         </button>
       </div>
       <br />
       <div>
         <button
-          id="sw12"
-          @click="$router.push('questionSeven'), sw12(), answer('6: sw12')"
+          id="other"
+          @click="
+            $router.push('questionSeven'), change(), answer('5: Other COM port')
+          "
         >
-          SW12 Port
-        </button>
-      </div>
-      <br />
-      <div>
-        <button
-          id="batt"
-          @click="$router.push('questionSeven'), answer('6: battery')"
-        >
-          Direct to Battery
-        </button>
-      </div>
-      <br />
-      <div>
-        <button
-          id="a12Vother"
-          @click="$router.push('questionSeven'), answer('6: 12V Other')"
-        >
-          Other 12V Source
-        </button>
-      </div>
-      <br />
-      <div>
-        <button
-          id="usb"
-          @click="$router.push('questionSeven'), change(), answer('6: USB')"
-        >
-          USB only
+          Other COM port
         </button>
       </div>
     </div>
@@ -61,16 +50,13 @@
 <script>
 export default {
   methods: {
-    change() {
-      alert("Connect your modem to a 12V power source");
-    },
-    sw12() {
-      alert(
-        "Make sure your SW12 port is turned/turning on through your datalogger program"
-      );
-    },
     answer(record) {
       console.log(record);
+    },
+    change() {
+      alert(
+        "Verify that the cable is the correct cable and properly connected."
+      );
     },
   },
 };

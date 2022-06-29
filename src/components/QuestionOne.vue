@@ -1,33 +1,42 @@
 <template>
   <section id="main">
-    <div id="one">
+    <div id="questionLocation">
       <p>
-        Is your modem setup on a station that was working and then it stopped?
-        Or is it a new setup?
+        Are you troubleshooting remotely, or are you on-site with the modem?
       </p>
       <div>
-        <button @click="$router.push('questionThree'), answer('1: Stopped')">
-          Stopped
+        <button
+          id="remote"
+          @click="
+            $router.push('questionTwo'), change(), answer('Location: Remote')
+          "
+        >
+          Remote
         </button>
       </div>
       <br />
       <div>
-        <button @click="$router.push('questionTwo'), answer('1: New Setup')">
-          New Setup
+        <button
+          id="on-site"
+          @click="$router.push('questionTwo'), answer('Location: On-site')"
+        >
+          On-site
         </button>
       </div>
     </div>
   </section>
 </template>
-
 <script>
 export default {
-  name: "QuestionOne",
   methods: {
+    change() {
+      alert(
+        "Note: there may not be much that can be done to correct the problem remotely. Be aware that it might be necessary to schedule a site visit."
+      );
+    },
     answer(record) {
       console.log(record);
     },
   },
 };
-//document.getElementById().value <--use this possibly to record the button somewhere instead of just the console.
 </script>
