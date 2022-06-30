@@ -1,20 +1,16 @@
 <template>
   <section id="main">
-    <div id="questionNine">
+    <div>
       <p>Does your modem already have cellular service?</p>
       <div>
-        <button
-          id="q8ayes"
-          @click="$router.push('questionTen'), answer('9: Yes')"
-        >
+        <button @click="$router.push('questionThirteen'), answer('12: Yes')">
           Yes
         </button>
       </div>
       <br />
       <div>
         <button
-          id="q8ano"
-          @click="$router.push('questionTen'), change(), answer('9: No')"
+          @click="$router.push('questionThirteen'), message(), answer('12: No')"
         >
           No
         </button>
@@ -25,8 +21,10 @@
 <script>
 export default {
   methods: {
-    change() {
-      alert("Please make sure the modem has service with a cellular provider");
+    message() {
+      alert(
+        "Please make sure the modem has service with a cellular provider, and an activated SIM card inserted into the modem."
+      );
     },
     answer(record) {
       console.log(record);

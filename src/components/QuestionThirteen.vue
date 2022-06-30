@@ -1,41 +1,33 @@
 <template>
   <section id="main">
-    <div id="questionTen">
+    <div>
       <p>
         Did you get your service through AT&T, Verizon, Campbell Scientific, or
         another carrier?
       </p>
       <div>
-        <button
-          id="att"
-          @click="$router.push('questionEleven'), answer('10: AT&T')"
-        >
+        <button @click="$router.push('questionFourteen'), answer('13: AT&T')">
           AT&T
         </button>
       </div>
       <br />
       <div>
         <button
-          id="verizon"
-          @click="$router.push('questionEleven'), answer('10: Verizon')"
+          @click="$router.push('questionFourteen'), answer('13: Verizon')"
         >
           Verizon
         </button>
       </div>
       <br />
       <div>
-        <button
-          id="csi"
-          @click="$router.push('questionEleven'), answer('10: CSI')"
-        >
+        <button @click="$router.push('questionFourteen'), answer('13: CSI')">
           CampbellSci
         </button>
       </div>
       <br />
       <div>
         <button
-          id="otherCarrier"
-          @click="$router.push('questionEleven'), answer('10: Other Carrier')"
+          @click="$router.push('questionFourteen'), answer('13: Other Carrier')"
         >
           Other
         </button>

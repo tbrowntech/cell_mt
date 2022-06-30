@@ -62,14 +62,24 @@ const routes = [
     component: () => import("../components/QuestionEleven.vue"),
   },
   {
-    path: "/questionLocation",
-    name: "questionLocation",
-    component: () => import("../components/QuestionLocation.vue"),
+    path: "/questionTwelve",
+    name: "questionTwelve",
+    component: () => import("../components/QuestionTwelve.vue"),
   },
   {
-    path: "/questionSymptoms",
-    name: "questionSymptoms",
-    component: () => import("../components/QuestionSymptoms.vue"),
+    path: "/questionThirteen",
+    name: "questionThirteen",
+    component: () => import("../components/QuestionThirteen.vue"),
+  },
+  {
+    path: "/questionFourteen",
+    name: "questionFourteen",
+    component: () => import("../components/QuestionFourteen.vue"),
+  },
+  {
+    path: "/questionFifteen",
+    name: "questionFifteen",
+    component: () => import("../components/QuestionFifteen.vue"),
   },
   {
     path: "/end",

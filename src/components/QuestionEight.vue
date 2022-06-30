@@ -1,56 +1,44 @@
 <template>
   <section id="main">
-    <div id="questionSix">
+    <div>
       <p>How is your modem connected to power?</p>
       <div>
         <button
-          id="CSIOpower"
-          @click="$router.push('questionSeven'), answer('6: CS I/O Power')"
+          @click="$router.push('questionNine'), answer('8: CS I/O Power')"
         >
           CS I/O
         </button>
       </div>
       <br />
       <div>
-        <button
-          id="12V"
-          @click="$router.push('questionSeven'), answer('6: 12V')"
-        >
+        <button @click="$router.push('questionNine'), answer('8: 12V')">
           12V Port/Power Cable
         </button>
       </div>
       <br />
       <div>
         <button
-          id="sw12"
-          @click="$router.push('questionSeven'), sw12(), answer('6: sw12')"
+          @click="$router.push('questionNine'), message2(), answer('8: sw12')"
         >
           SW12 Port
         </button>
       </div>
       <br />
       <div>
-        <button
-          id="batt"
-          @click="$router.push('questionSeven'), answer('6: battery')"
-        >
+        <button @click="$router.push('questionNine'), answer('8: battery')">
           Direct to Battery
         </button>
       </div>
       <br />
       <div>
-        <button
-          id="a12Vother"
-          @click="$router.push('questionSeven'), answer('6: 12V Other')"
-        >
+        <button @click="$router.push('questionNine'), answer('8: 12V Other')">
           Other 12V Source
         </button>
       </div>
       <br />
       <div>
         <button
-          id="usb"
-          @click="$router.push('questionSeven'), change(), answer('6: USB')"
+          @click="$router.push('questionNine'), message1(), answer('8: USB')"
         >
           USB only
         </button>
@@ -61,10 +49,10 @@
 <script>
 export default {
   methods: {
-    change() {
+    message1() {
       alert("Connect your modem to a 12V power source");
     },
-    sw12() {
+    message2() {
       alert(
         "Make sure your SW12 port is turned/turning on through your datalogger program"
       );

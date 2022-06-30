@@ -1,14 +1,13 @@
 <template>
   <section id="main">
-    <div id="questionEleven">
+    <div>
       <p>
         Does your cellular account come with a public static IP address, or a
         private dynamic IP address?
       </p>
       <div>
         <button
-          id="publicIP"
-          @click="$router.push('questionLocation'), answer('11: Public Static')"
+          @click="$router.push('questionFifteen'), answer('14: Public Static')"
         >
           Public Static
         </button>
@@ -16,9 +15,10 @@
       <br />
       <div>
         <button
-          id="privateIP"
           @click="
-            $router.push('questionLocation'), answer('9: Private Dynamic')
+            $router.push('questionFifteen'),
+              message2(),
+              answer('14: Private Dynamic')
           "
         >
           Private Dynamic
@@ -27,9 +27,8 @@
       <br />
       <div>
         <button
-          id="unsure"
           @click="
-            $router.push('questionLocation'), change(), answer('9: Unsure')
+            $router.push('questionFifteen'), message1(), answer('14: Unsure')
           "
         >
           Unsure
@@ -41,9 +40,14 @@
 <script>
 export default {
   methods: {
-    change() {
+    message1() {
       alert(
-        "Contact the person in your office who handles your cellular service"
+        "Contact the person in your office who handles your cellular service."
+      );
+    },
+    message2() {
+      alert(
+        "Make sure you have set up the KonectGDS router and entered the DNS address, port number, and TCP password into your datalogger."
       );
     },
     answer(record) {

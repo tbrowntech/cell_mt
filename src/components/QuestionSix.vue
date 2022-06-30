@@ -1,14 +1,13 @@
 <template>
   <section id="main">
-    <div id="questionFive">
+    <div>
       <p>
         Have you connected your datalogger and modem with an RS232 cable (null
-        modem), CS I/O cable, Ethernet cable, or COM port?
+        modem), CS I/O cable, Ethernet cable, or other COM port?
       </p>
       <div>
         <button
-          id="RS232"
-          @click="$router.push('questionSeven'), change(), answer('5: RS232')"
+          @click="$router.push('questionSeven'), message(), answer('6: RS232')"
         >
           RS232
         </button>
@@ -16,8 +15,7 @@
       <br />
       <div>
         <button
-          id="CSInput"
-          @click="$router.push('questionSeven'), change(), answer('5: CS I/O')"
+          @click="$router.push('questionSeven'), message(), answer('6: CS I/O')"
         >
           CS I/O
         </button>
@@ -25,9 +23,8 @@
       <br />
       <div>
         <button
-          id="ethernet"
           @click="
-            $router.push('questionSeven'), change(), answer('5: Ethernet')
+            $router.push('questionSeven'), message(), answer('6: Ethernet')
           "
         >
           Ethernet
@@ -36,9 +33,10 @@
       <br />
       <div>
         <button
-          id="other"
           @click="
-            $router.push('questionSeven'), change(), answer('5: Other COM port')
+            $router.push('questionSeven'),
+              message(),
+              answer('6: Other COM port')
           "
         >
           Other COM port
@@ -53,7 +51,7 @@ export default {
     answer(record) {
       console.log(record);
     },
-    change() {
+    message() {
       alert(
         "Verify that the cable is the correct cable and properly connected."
       );

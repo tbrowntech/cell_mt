@@ -1,25 +1,19 @@
 <template>
   <section id="main">
-    <div id="questionLocation">
+    <div>
       <p>
         Are you troubleshooting remotely, or are you on-site with the modem?
       </p>
       <div>
         <button
-          id="remote"
-          @click="
-            $router.push('questionTwo'), change(), answer('Location: Remote')
-          "
+          @click="$router.push('questionTwo'), change(), answer('1: Remote')"
         >
           Remote
         </button>
       </div>
       <br />
       <div>
-        <button
-          id="on-site"
-          @click="$router.push('questionTwo'), answer('Location: On-site')"
-        >
+        <button @click="$router.push('questionTwo'), answer('1: On-site')">
           On-site
         </button>
       </div>

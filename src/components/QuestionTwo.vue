@@ -1,18 +1,18 @@
 <template>
   <section id="main">
-    <div id="one">
+    <div>
       <p>
         Is your modem setup on a station that was working and then it stopped?
         Or is it a new setup?
       </p>
       <div>
-        <button @click="$router.push('questionFour'), answer('1: Stopped')">
+        <button @click="$router.push('questionFour'), answer('2: Stopped')">
           Stopped
         </button>
       </div>
       <br />
       <div>
-        <button @click="$router.push('questionThree'), answer('1: New Setup')">
+        <button @click="$router.push('questionThree'), answer('2: New Setup')">
           New Setup
         </button>
       </div>
@@ -29,5 +29,4 @@ export default {
     },
   },
 };
-//document.getElementById().value <--use this possibly to record the button somewhere instead of just the console.
 </script>
