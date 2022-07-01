@@ -6,7 +6,7 @@
       </p>
       <div>
         <button
-          @click="$router.push('questionTwo'), change(), answer('1: Remote')"
+          @click="$router.push('questionTwo'), message(), answer('1: Remote')"
         >
           Remote
         </button>
@@ -23,7 +23,7 @@
 <script>
 export default {
   methods: {
-    change() {
+    message() {
       alert(
         "Note: there may not be much that can be done to correct the problem remotely. Be aware that it might be necessary to schedule a site visit."
       );

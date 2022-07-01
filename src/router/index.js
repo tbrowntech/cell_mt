@@ -2,6 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
+    path: "/end",
+    name: "end",
+    component: () => import("../components/EndPage.vue"),
+  },
+  {
     path: "/",
     name: "home",
     component: () => import("../views/HomeView.vue"),
@@ -77,14 +82,19 @@ const routes = [
     component: () => import("../components/QuestionFourteen.vue"),
   },
   {
-    path: "/questionFifteen",
-    name: "questionFifteen",
-    component: () => import("../components/QuestionFifteen.vue"),
+    path: "/r1q1",
+    name: "r1q1",
+    component: () => import("../RouteOne/QuestionOne.vue"),
   },
   {
-    path: "/end",
-    name: "end",
-    component: () => import("../components/EndPage.vue"),
+    path: "/r1q2",
+    name: "r1q2",
+    component: () => import("../RouteOne/QuestionTwo.vue"),
+  },
+  {
+    path: "/r1q3",
+    name: "r1q3",
+    component: () => import("../RouteOne/QuestionThree.vue"),
   },
 ];
 

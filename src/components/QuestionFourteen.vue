@@ -1,57 +1,44 @@
 <template>
   <section id="main">
     <div>
-      <p>
-        Does your cellular account come with a public static IP address, or a
-        private dynamic IP address?
-      </p>
-      <div>
-        <button
-          @click="$router.push('questionFifteen'), answer('14: Public Static')"
-        >
-          Public Static
-        </button>
-      </div>
-      <br />
-      <div>
-        <button
-          @click="
-            $router.push('questionFifteen'),
-              message2(),
-              answer('14: Private Dynamic')
-          "
-        >
-          Private Dynamic
-        </button>
-      </div>
-      <br />
-      <div>
-        <button
-          @click="
-            $router.push('questionFifteen'), message1(), answer('14: Unsure')
-          "
-        >
-          Unsure
-        </button>
-      </div>
+      <p>What symptoms are you experiencing with your connection?</p>
+    </div>
+    <div>
+      <button @click="$router.push('r1q1')">
+        Modem is showing that it's connected, but I cannot connect to my
+        datalogger
+      </button>
+    </div>
+    <br />
+    <div>
+      <button>
+        Can't connect with datalogger and modem shows signs it isn't connected
+      </button>
+    </div>
+    <br />
+    <div><button>My connection is intermittent</button></div>
+    <br />
+    <div>
+      <button
+        @click="
+          $router.push('end'), message(), answer('15: Other reason not listed')
+        "
+      >
+        Other reason not listed
+      </button>
     </div>
   </section>
 </template>
 <script>
 export default {
   methods: {
-    message1() {
-      alert(
-        "Contact the person in your office who handles your cellular service."
-      );
-    },
-    message2() {
-      alert(
-        "Make sure you have set up the KonectGDS router and entered the DNS address, port number, and TCP password into your datalogger."
-      );
-    },
     answer(record) {
       console.log(record);
+    },
+    message() {
+      alert(
+        "Please contact CSI technical support by submitting a web request or by calling 435-227-9100."
+      );
     },
   },
 };
